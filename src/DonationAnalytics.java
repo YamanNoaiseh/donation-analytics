@@ -75,7 +75,7 @@ public class DonationAnalytics {
 					// Remove decimals if the total amount is actually an integer (00 after the decimal point)
 					double tempAMT = totalAMT * 100;
 					if ((tempAMT % 100 == 0)) {
-						int amt = (int) totalAMT;
+						long amt = (long) totalAMT;
 						output += amt + "|" + donations.getNumberOfRepeatDonations();
 					} else {
 						output += totalAMT + "|" + donations.getNumberOfRepeatDonations();
@@ -144,9 +144,9 @@ class DonationsCollection {
 		return lowHeap.size() + highHeap.size();
 	}
 	
-	public int getRunningPercentile() {
+	public long getRunningPercentile() {
 		double runningPercentile = lowHeap.peek();
-		return (int) Math.round(runningPercentile);
+		return (long) Math.round(runningPercentile);
 	}
 	
 	public void addDonation(double amount) {
