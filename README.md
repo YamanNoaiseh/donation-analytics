@@ -13,7 +13,7 @@
 - External libraries: None.
 
 # Data structures:
-•	HashMap<String, DonationsCollection>: Where the key is the concatination of "CMTE_ID" and "-" and "5-digits-ZIP_CODE", and the value is an object of custom class described below.
+•	HashMap<String, DonationsCollection>: Where the key is the concatination of "CMTE_ID" and "-" and "5-digits-ZIP_CODE", and the value is an object of custom class described below.  
 •	HashSet<String>: to keep track of repeat donors. An element of this set is made of the concatination of the donor's "NAME" and "-" and "5-digits-ZIP_CODE" as a unique identifier of a donor.
 
 Each communication with these hash-based datastructures is constant time.
