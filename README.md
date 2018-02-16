@@ -28,7 +28,7 @@ highHeap: A min heap
 and ensures that lowHeap keeps number of elements equals to the ordinal rank of the running percentile according to the nearest-rank method.
 Each addition to this heap-based datastructure is O(log(K)) time complexity, where K is the total number of elements in both heaps in this specific DonationsCollection object.
 
-Assumptions:
+Assumptions:  
 •	Minimum length of the "NAME" field is 2. That ism when the name contains only first initials.
 •	The second last element in an output line (total amount of contributions received) is a decimal value (Java double) unless it is actually an integer, which is then outputted with no decimal point.
 Example 1: if the total amount of contributions received = 1000.11 it will be presented as 1000.11
