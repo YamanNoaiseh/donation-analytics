@@ -4,7 +4,7 @@
 >
 
 
-# Author: Yaman Noaiseh
+Author: Yaman Noaiseh
 
 
 # Implementation Tools:
