@@ -16,11 +16,11 @@ public class DonationAnalytics {
 
 	public static void main(String[] args) {
 		// String percentileFileName = "./input/percentile.txt";
-		String percentileFileName = "./../input/percentile.txt"
+		String percentileFileName = "./../input/percentile.txt";
 		// String inputFileName = "./input/itcont.txt";
-		String inputFileName = "./../input/itcont.txt"
+		String inputFileName = "./../input/itcont.txt";
 		// String outputFileName = "./output/repeat_donors.txt";
-		String outputFileName = "./../output/repeat_donors.txt"
+		String outputFileName = "./../output/repeat_donors.txt";
 		int bufferSize = 8*1024;
 		int percentile = 0;
 		try (BufferedReader bReader = new BufferedReader(new FileReader(percentileFileName), bufferSize)) {
