@@ -20,16 +20,16 @@ Data structures:
 
 Each communication with these hash-based datastructures is constant time.
 
-Class DonationsCollection:
-This class keeps track of the total amounts have been donated by repear donors in the current year from the current zip code, as well as the total number of donations made, and calculates the running percentile of donations from repeat donors.
-It keeps two heaps (Java PriorityQueue objects):
-lowHeap: A max heap
-highHeap: A min heap
-and ensures that lowHeap keeps number of elements equals to the ordinal rank of the running percentile according to the nearest-rank method.
+Class DonationsCollection:  
+This class keeps track of the total amounts have been donated by repear donors in the current year from the current zip code, as well as the total number of donations made, and calculates the running percentile of donations from repeat donors.  
+It keeps two heaps (Java PriorityQueue objects):  
+lowHeap: A max heap  
+highHeap: A min heap  
+and ensures that lowHeap keeps number of elements equals to the ordinal rank of the running percentile according to the nearest-rank method.  
 Each addition to this heap-based datastructure is O(log(K)) time complexity, where K is the total number of elements in both heaps in this specific DonationsCollection object.
 
 Assumptions:  
-•	Minimum length of the "NAME" field is 2. That ism when the name contains only first initials.
-•	The second last element in an output line (total amount of contributions received) is a decimal value (Java double) unless it is actually an integer, which is then outputted with no decimal point.
-Example 1: if the total amount of contributions received = 1000.11 it will be presented as 1000.11
+•	Minimum length of the "NAME" field is 2. That ism when the name contains only first initials.  
+•	The second last element in an output line (total amount of contributions received) is a decimal value (Java double) unless it is actually an integer, which is then outputted with no decimal point.  
+Example 1: if the total amount of contributions received = 1000.11 it will be presented as 1000.11  
 Example 2: if the total amount of contributions received = 1000.00 it will be presented as 1000
