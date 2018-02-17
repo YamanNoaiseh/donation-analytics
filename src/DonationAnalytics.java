@@ -59,6 +59,7 @@ public class DonationAnalytics {
 					// Add donors to past years donors set
 					pastYearsDonors.addAll(newDonors);
 					newDonors = new HashSet<String>();
+					repeatDonations = new HashMap<String, DonationsCollection>();
 					currentYear = year;
 				} 
 				// Check if a repeat donor
