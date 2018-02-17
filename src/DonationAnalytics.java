@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -56,7 +57,7 @@ public class DonationAnalytics {
 				}
 				if (year > currentYear) {
 					// A new year has come!
-					// Add donors to past years donors set
+					// Add donors to past years donors set and reset our datastructures
 					pastYearsDonors.addAll(newDonors);
 					newDonors = new HashSet<String>();
 					repeatDonations = new HashMap<String, DonationsCollection>();
@@ -79,7 +80,8 @@ public class DonationAnalytics {
 						long amt = (long) totalAMT;
 						output += amt + "|" + donations.getNumberOfRepeatDonations();
 					} else {
-						output += totalAMT + "|" + donations.getNumberOfRepeatDonations();
+						DecimalFormat formatter = new DecimalFormat("#.00");
+						output += formatter.format(totalAMT) + "|" + donations.getNumberOfRepeatDonations();
 					}
 					repeatDonations.put(key, donations);
 					writer.write(output);
