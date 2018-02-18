@@ -47,7 +47,7 @@ public class DonationAnalytics {
 					continue;
 				}
 				// Valid entry, let's do the work!
-				// Current Donor's unique ID = NAME-ZIPCODE
+				// Current Donor's unique ID = "NAME-ZIPCODE"
 				String currentDonor = fields[1] + "-" + fields[2];
 				int year = Integer.parseInt(fields[3]);
 				if (year < currentYear) {
@@ -65,6 +65,7 @@ public class DonationAnalytics {
 				} 
 				// Check if a repeat donor
 				if (pastYearsDonors.contains(currentDonor)) {
+					//     Key = "CMTE_ID-ZIPCODE"
 					String key = fields[0] + "-" + fields[2];
 					DonationsCollection donations = (repeatDonations.containsKey(key)) ? 
 							repeatDonations.get(key): new DonationsCollection(percentile);
